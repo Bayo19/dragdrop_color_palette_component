@@ -1,0 +1,19 @@
+.draggable {
+    height: 100px;
+}
+
+.draggable-elements,
+.droppable-elements {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.droppable-elements {
+    border: 2px solid black;
+    height: 100px;
+    margin: 40px 5px;
+}
+
+.droppable {
+    border: 2px solid black
+}
