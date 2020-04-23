@@ -47,3 +47,14 @@ for (let x of dropBox) {
     x.addEventListener('dragover', onDragOver)
     x.addEventListener('drop', onDrop)
 }
+
+// -------------
+// random colors to test the drag and drop functionality
+for (x of dragbox) {
+    let r = Math.floor(Math.random() * 256)
+    let g = Math.floor(Math.random() * 256)
+    let b = Math.floor(Math.random() * 256)
+
+    x.style.backgroundColor = `rgb(${r},${g},${b})`
+}
+// -------------
