@@ -27,8 +27,6 @@ function onDrop(event) {
 }
 
 
-
-
 let dragbox = document.querySelectorAll('.draggable')
 let arr = Array.from(dragbox)
 for (i = 0; i < arr.length; i++) {
@@ -38,8 +36,6 @@ for (i = 0; i < arr.length; i++) {
     arr[i].setAttribute('id', 'qqqq' + (idCount + i))
 
 }
-
-
 
 let dropBox = document.querySelectorAll('.box')
 
@@ -57,4 +53,17 @@ for (x of dragbox) {
 
     x.style.backgroundColor = `rgb(${r},${g},${b})`
 }
-// -------------
+
+document.body.onkeypress = function(e) {
+        e.preventDefault()
+        if (e.keyCode == 32) {
+            arr.map(function(a) {
+                let r = Math.floor(Math.random() * 256)
+                let g = Math.floor(Math.random() * 256)
+                let b = Math.floor(Math.random() * 256)
+
+                a.style.backgroundColor = `rgb(${r},${g},${b})`
+            })
+        }
+    }
+    // -------------
